@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha System</title>
+    <link rel="stylesheet" href="CSS/fontawesome-free-6.5.2-web/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image:url("IMG/Gacha/Gacha-wall.png");
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: black; 
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .container2 {
+            max-width: 900px; 
+            margin: auto auto; 
+            padding: 0 20px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center; 
+        }
+
+        nav button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav button:focus {
+            outline: none; 
+        }
+
+        nav button i {
+            color: white;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white; 
+            text-decoration: none; 
+            padding: 10px 20px; 
+            margin: 0 10px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        nav a:hover {
+            background-color: #035c9c; 
+            border-radius: 5px; 
+        }
+
+        .content {
+            background-color: black;
+            padding: 20px; 
+            margin: 20px auto; 
+            max-width: 1500px; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .content h2,h1 {
+            color: white; 
+            text-align: center;
+        }
+
+        .content p {
+            color: white; 
+        }
+		.content h3 {
+            color: white; 
+			text-align: left;
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">HSR GAME WIKI</div>
+            <nav>
+                <button onclick="toggleMusic()">
+                    <i id="musicIcon" class="fas fa-pause"></i>
+                </button>
+                <a href="index.html">Home</a>
+                <a href="Navigation page.html">Back to Navigation</a>
+                
+            </nav>
+        </div>
+    </header>
+
+    <div class="container2">
+        <div class="content">
+            <h1>Gacha System</h1>
+            <p>Honkai: Star Rail uses a gacha system as the primary way for a player to obtain new Characters and Light Cones. It is generally the only way to obtain the highest rarity Characters and Light Cones.</p>
+            <video width="800" height="auto" controls autoplay muted loop>
+                <source src="VIDEO/Gacha/chrome_PVQod0qOA6.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br>
+            <hr>
+            <h1>Banner Types</h1>
+            <p>In Honkai Star Rail, acquiring new characters and powerful Light Cones (weapons) is done through a gacha system called "Warps." Here's a breakdown of the different Warp types:</p>
+			
+			<h3>Character Event Warp (Limited)</h3>
+			<img src="IMG/Gacha/Limited.png" height="auto" width="800" alt="banner" >
+			<p>This Warp features a newly released character with a boosted chance to obtain them.</p>
+			<p>It's a temporary banner lasting for the duration of the character's event.</p>
+			<p>This is your best chance to get the new character but requires specific "Special Passes" for pulls.</p>
+			<p>It offers a pity system - after a certain number of pulls (usually 90), you're guaranteed a 5-star character, most likely the featured one.</p>
+			
+			<br>
+			<hr>
+			<h3>Light Cone Event Warp (Limited)</h3>
+			<img src="IMG/Gacha/honkai-star-rail-light-cone-even.png" height="auto" width="800" alt="banner" >
+			<p>Similar to Character Event Warp, this banner features a new Light Cone with a boosted chance to get it.</p>
+			<p>It's also temporary and requires Special Passes for pulls.</p>
+			<p>Light Cone Event Warp has a pity system where after a set number of pulls (usually 80), you're guaranteed a 5-star Light Cone.</p>
+			<br>
+			<hr>
+			<h3>Regular Warp (Permanent)</h3>
+			<img src="IMG/Gacha/Honkai-Star-Rail-Regular-Stellar.png" height="auto" width="800" alt="banner" >
+			<p>Also known as "Stellar Warp," this is the permanent banner available year-round.</p>
+			<p>It features a pool of all characters and Light Cones (excluding limited ones).</p>
+			<p>You can use regular "Passes" for pulls here.</p>
+			<p>The pity system works similarly, guaranteeing a 5-star character or Light Cone after a set number of pulls (usually 90).</p>
+			<p>However, the character or Light Cone you get won't be guaranteed to be new or specific.</p>
+			<br>
+			<hr>
+			
+			
+			
+			
+			
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" src="AUD/Gacha/y2mate.com - Supreme Idiocy.mp3" autoplay loop></audio>
+
+    <script>
+        var music = document.getElementById("backgroundMusic");
+        var musicIcon = document.getElementById("musicIcon");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicIcon.classList.remove("fa-play");
+                musicIcon.classList.add("fa-pause");
+            } else {
+                music.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-play");
+            }
+        }
+    </script>
+</body>
+</html>

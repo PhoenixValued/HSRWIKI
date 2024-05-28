@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_Page</title>
+    <link rel="stylesheet" href="CSS/fontawesome-free-6.5.2-web/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("IMG/index/The Astral Express (1).png"); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-color: black;
+            background-attachment: fixed;
+        }
+
+        footer {
+            background-color: #292929; 
+            padding: 2px 2px; 
+            text-align: center; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 1;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+            gap: 20px;
+        }
+
+        .footer-nav a {
+            color: #ffffff; 
+            text-decoration: none; 
+            padding: 10px 20px;  
+            border-radius: 50%;  
+            transition: background-color 0.3s ease;  
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;  
+            height: 40px;  
+        }
+
+        .footer-nav a:hover {
+            background-color: #444;  
+        }
+
+        .footer-nav a i {
+            font-size: 20px;
+        }
+
+        .center-align {
+            display: flex;
+            flex-direction: column;  
+            justify-content: center;  
+            align-items: center;  
+            height: calc(100vh - 80px);  
+        }
+
+        .center-align img.large {
+            width: 500px;  
+            height: 250px;  
+        }
+
+        .center-align img.small {
+            width: 250px;  
+            height: 125px;  
+        }
+
+        .center-align p {
+            font-size: 45px;
+            color: white;  
+            margin-top: 10px;  
+        }
+
+        .center-align a:hover {
+            transform: scale(.9);  
+            transition: transform 0.3s ease;  
+        }
+    </style>
+</head>
+<body>
+     
+    <audio id="backgroundMusic"  autoplay loop>
+        <source src="AUD/Star Rail-(p).opus" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                 
+                <button onclick="toggleMusic()">
+                    <i id="musicIcon" class="fas fa-pause"></i>
+                </button>
+                 
+                <p style="color: white">Official Links for Honkai Star Rail &rarr;</p> 
+                 
+                <a href="https://hsr.hoyoverse.com/en-us/home" title="HSR official site" target="_blank"><i class="fas fa-home"></i></a>
+                <a href="https://twitter.com/honkaistarrail?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" title="HSR official Twitter" target="_blank" ><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com/HonkaiStarRail/" title="HSR official Facebook" target="_blank"><i class="fab fa-facebook-f" target="_blank"></i></a>
+                <a href="https://www.instagram.com/honkaistarrail/" title="HSR official Instagram" target="_blank"><i class="fab fa-instagram" ></i></a>
+                <a href="about.html" title="About" alt="About page"><i class="fas fa-question-circle"></i></a>
+            </div>
+        </div>
+    </footer>
+
+     
+    <div class="center-align">
+        <img src="IMG/index/1000.png" class="large" alt="">
+        <p>Game Wiki</p>
+        <a href="Navigation page.html"><img src="IMG/index/enter.png" class="small" alt="Button 1"></a>
+    </div>
+
+    <script>
+        var music = document.getElementById("backgroundMusic");
+        var musicIcon = document.getElementById("musicIcon");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicIcon.classList.remove("fa-play");
+                musicIcon.classList.add("fa-pause");
+            } else {
+                music.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-play");
+            }
+        }
+    </script>
+</body>
+</html>

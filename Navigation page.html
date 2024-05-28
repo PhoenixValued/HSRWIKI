@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Page</title>
+    <link rel="stylesheet" href="CSS/fontawesome-free-6.5.2-web/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("IMG/Navigation/Honkai Star Rail FB Banner Version 1.0.png"); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-color: black;
+            background-attachment: fixed;
+        }
+
+        footer {
+            background-color: black; 
+            color: white; 
+            padding: 20px; 
+            text-align: center; 
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            display: grid; 
+            grid-template-columns: 1fr; 
+            gap: 30px; 
+            padding-top: 20px;
+            justify-items: center;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: flex-start;
+            height: 20px; 
+        }
+
+        .footer-nav a {
+            color: #fff; 
+            text-decoration: none; 
+            margin-right: 20px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        .footer-nav a:hover {
+            background-color: grey; 
+            border-radius: 5px; 
+            transform: scale(.9);
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .button-link {
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+
+        .button-link img {
+            width: 200px;
+            height: 100px;
+            transition: transform 0.3s ease;
+        }
+
+        .button-link:hover img {
+            transform: scale(0.9);
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+        }
+
+        .video-container video {
+            width: 95%;
+            max-width: 1000px;
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="button-container">
+            <div class="button-link">
+                <a href="General Tips.html"><img src="IMG/Navigation/Vector.png" alt="Button 1"></a>
+            </div>
+            <div class="button-link">
+                <a href="Combat.html"><img src="IMG/Navigation/Vector2.png" alt="Button 2"></a>
+            </div>
+            <div class="button-link">
+                <a href="Terminology.html"><img src="IMG/Navigation/Vector3.png" alt="Button 3"></a>
+            </div>
+            <div class="button-link">
+                <a href="Gacha.html"><img src="IMG/Navigation/Vector4.png" alt="Button 4"></a>
+            </div>
+        </div>
+        <div class="video-container">
+            <video controls autoplay muted loop>
+                <source src="VIDEO/Navigation/Trailer.webm" type="video/webm">
+                Your browser does not support the video tag.
+            </video>  
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-nav">
+                <audio id="backgroundMusic" autoplay loop>
+                    <source src="AUD/Navigation/Space Comedy-(p).opus" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                <button onclick="toggleMusic()" style="margin-right: 15px;">
+                    <i id="musicIcon" class="fas fa-pause" style="font-size: 10px;"></i>
+                </button>
+                <a href="index.html">Return</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var music = document.getElementById("backgroundMusic");
+        var musicIcon = document.getElementById("musicIcon");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicIcon.classList.remove("fa-play");
+                musicIcon.classList.add("fa-pause");
+            } else {
+                music.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-play");
+            }
+        }
+    </script>
+</body>
+</html>

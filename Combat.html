@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combat Basics</title>
+    <link rel="stylesheet" href="CSS/fontawesome-free-6.5.2-web/css/all.min.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("IMG/Combat/Combatwall.png");
+            background-repeat: no-repeat;  
+            background-size: cover; 
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: black; 
+            color: #fff; 
+            padding: 20px 0; 
+        }
+
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto;
+            padding: 0 20px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .container2 {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            align-items: center; 
+        }
+
+        nav button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        nav button:focus {
+            outline: none;
+        }
+
+        nav button i {
+            color: white;
+            font-size: 20px;
+        }
+
+        nav a {
+            color: white; 
+            text-decoration: none;
+            padding: 10px 20px; 
+            margin: 0 10px; 
+            transition: background-color 0.3s ease; 
+        }
+
+        nav a:hover {
+            background-color: #035c9c; 
+            border-radius: 5px; 
+        }
+
+        .content {
+            background-color: black; 
+            padding: 20px; 
+            margin: 20px auto; 
+            max-width: 1483px; 
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+
+        .content h2 {
+            color: white; 
+            text-align: center;
+        }
+		
+		.content h3 {
+            color: white; 
+            text-align: left; 
+        }
+        .content p {
+            color: white; 
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">HSR GAME WIKI</div>
+            <nav>
+                <button onclick="toggleMusic()">
+                    <i id="musicIcon" class="fas fa-pause"></i>
+                </button>
+                <a href="index.html">Home</a>
+                <a href="Navigation page.html">Back to Navigation</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container2">
+        <div class="content">
+            <h2>Combat Basics</h2>
+            <p>In this part of the guide, it will show the basics.</p>
+            <p>Honkai: Star Rail uses turn-based combat, which means that each character and enemy has to wait their turn to perform an action. When it’s your turn, you typically choose between attacking an opponent or helping a teammate. There are four characters per team, and there’s usually more than one opponent per battle.</p>
+            
+            <video width="auto" height="500" controls autoplay muted loop>
+                <source src="VIDEO/Combat/Sample Combat.webm" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <br>
+			<br>
+			<hr>
+			
+			<h2>Combat Controls</h2>
+           <h3>Basic Atk</h3>
+			<p>This is your character's standard attack, always available during their turn.</p>
+			<p>It consumes no resources and generates Skill Points (SP) for using Skills.</p>
+			<p>Basic Attacks are generally weaker than Skills and Ultimates, but they're reliable and help build resources for stronger abilities.</p>
+			
+            <video width="900" height="500" controls autoplay muted loop>
+                <source src="VIDEO/Combat/Basic.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+			<hr>
+			<h3>Skill</h3>
+			<p>These are unique abilities each character possesses with various effects.</p>
+			<p>Skills can deal damage, provide buffs to your team, inflict debuffs on enemies, or a combination of these.</p>
+			<p>They consume Skill Points (SP) to use.</p>
+			<p>Skills are often more powerful than Basic Attacks but less impactful than Ultimates.</p>
+            <video width="900" height="500" controls autoplay muted loop>
+                <source src="VIDEO/Combat/Skill.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+			<hr>
+			<h3>Ultimate</h3>
+			<p>This is a character's most powerful ability with a longer cooldown represented by an energy bar.</p>
+			<p>Ultimates deal significant damage, provide strong buffs/debuffs, or offer unique strategic effects.</p>
+			<p>They can be used anytime during the turn, even if it's not the character's turn, as long as their energy bar is full.</p>
+            <video width="900" height="500" controls autoplay muted loop>
+                <source src="VIDEO/Combat/Ultimate.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <hr>
+			
+			<h3>Turn Order</h3>
+			<p>Honkai Star Rail uses a turn-based combat system where characters and enemies take turns performing actions. Here's a quick rundown of the turn order:</p>
+			<br>
+			<p><b>Action Value (AV)</b>: This invisible stat determines turn order. Lower AV means a character can act sooner. You can enable AV display in settings.</p>
+			<p><b>Speed</b>: This invisible stat determines turn order. Lower AV means a character can act sooner. You can enable AV display in settings.</p>
+			
+			<p><b>Action &amp; AV Reset: </b>: Look at the upper left corner of the battle screen. This list shows upcoming turns, with the character at the top going next.</p>
+			
+			<p><b>Turn Order List</b>: After a character acts, their AV resets. Then, all AVs decrease together until someone reaches 0 AV, becoming eligible to act again.</p>
+			<p><b>Remember:</b></p>
+			<p>Ultimates are special abilities that can be used anytime, ignoring the turn order.</p>
+			<p>You can strategically use normal actions and then immediately use an Ultimate on the same character to keep buffs active.</p>
+			
+			
+            <video width="900" height="500" controls autoplay muted loop>
+                <source src="VIDEO/Combat/turn.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+			
+			
+			<h3>Weakness and Toughness</h3>
+			<p>Enemies have a weakness element (fire, ice, lightning, physical, or wind)</p>
+			<p>They also have a shield-like gauge called "Toughness."</p>
+			<p>By using attacks of the same element as the enemy's weakness, you deplete their Toughness.</p>
+			<p>Once their Toughness reaches zero, a "Break" is triggered.</p>
+			<img src="IMG/Combat/c9ddc76396e8439b492e6f8266951398_3888376861000466386.gif" width="900" height="500" alt="break">
+            
+			
+			
+        </div>
+    </div>
+
+    
+
+    <audio id="backgroundMusic" autoplay loop>
+        <source src="AUD/Combat/Braving the Cold-(p).opus" type="audio/mpeg">
+    </audio>
+
+    <script>
+        
+
+        var music = document.getElementById("backgroundMusic");
+        var musicIcon = document.getElementById("musicIcon");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicIcon.classList.remove("fa-play");
+                musicIcon.classList.add("fa-pause");
+            } else {
+                music.pause();
+                musicIcon.classList.remove("fa-pause");
+                musicIcon.classList.add("fa-play");
+            }
+        }
+    </script>
+</body>
+</html>
